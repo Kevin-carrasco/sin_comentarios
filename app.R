@@ -820,7 +820,7 @@ server <- function(input, output, session) {
 
   # dec_2 only applies if dec_1's answer is not 0 (i.e. some students would
   # be admitted for free, so paying extra to support them is a real choice).
-  observeEvent(input$confirm_dec1, {
+  observeEvent(input$dec_1, {
     show_dec2 <- !is.null(input$dec_1) && input$dec_1 != 0
     runjs(sprintf(
       "var el = document.querySelector(\".question-container[data-question-id='dec_2']\");

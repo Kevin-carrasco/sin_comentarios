@@ -1351,10 +1351,6 @@ sd_question(
 ```
 
 ```{r}
-shiny::actionButton("confirm_dec1", "Confirmar respuesta", class = "btn btn-primary mt-2 mb-3")
-```
-
-```{r}
 sd_question(
   type  = 'slider',
   id    = 'dec_2',
