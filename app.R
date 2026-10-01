@@ -43,6 +43,28 @@ db <- sd_db_connect(ignore = ignore_db, gssencmode = "disable")
 
 # UI setup --------------------------------------------------------------------
 
+# surveydown's Lua filter always embeds the full Font Awesome library (CSS
+# with its icon fonts + JS: ~5.4 MB of the ~7.6 MB page head), even though
+# this survey uses no icons. Strip both blocks from the head that sd_ui()
+# returns, cutting the page every participant downloads from ~3.5 MB to
+# ~0.85 MB gzipped. shiny::icon() would still work: it brings its own copy.
+sd_ui_no_font_awesome <- function() {
+  ui <- sd_ui()
+  head_html <- ui[[1]]$children[[1]]
+  # Leave the UI untouched if surveydown ever changes this structure
+  if (!inherits(head_html, "html")) return(ui)
+  head_html <- gsub(
+    "(?s)<style[^>]*>[[:space:]]*[.]fa[{]font-family:var[(]--fa-style-family.*?</style>",
+    "", head_html, perl = TRUE
+  )
+  head_html <- gsub(
+    "(?s)<script[^>]*>[[:space:]]*/[*]![[:space:]]*[*] Font Awesome Free.*?</script>",
+    "", head_html, perl = TRUE
+  )
+  ui[[1]]$children[[1]] <- HTML(head_html)
+  ui
+}
+
 ui <- tagList(
   useShinyjs(),
   use_waiter(),
@@ -53,7 +75,7 @@ ui <- tagList(
     ),
     color = "#333e48"
   ),
-  sd_ui(),
+  sd_ui_no_font_awesome(),
   tags$head(
     tags$script(HTML("
       function applyCBCNamesToDom() {
