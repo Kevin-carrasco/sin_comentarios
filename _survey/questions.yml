@@ -745,10 +745,14 @@ dec_1:
     '80': '80'
     '90': '90'
     '100': '100'
-dec_2:
+dec_1_hist:
   index: 47
+  type: text
+  label: (3)
+dec_2:
+  index: 48
   type: slider
-  label: (3) Para que esos alumnos puedan ser admitidos en el colegio, ¿cuánto más
+  label: (4) Para que esos alumnos puedan ser admitidos en el colegio, ¿cuánto más
     estaría dispuesto a pagar de la mensualidad para poder apoyar a estudiantes que
     no pagan?
   options:
@@ -764,9 +768,9 @@ dec_2:
     90%: '90'
     100%: '100'
 lucro_1:
-  index: 48
+  index: 49
   type: mc
-  label: (4) Salud
+  label: (5) Salud
   options:
     Muy justo: '5'
     Justo: '4'
@@ -776,9 +780,9 @@ lucro_1:
     No sé: '98'
     Prefiero no responder: '99'
 lucro_2:
-  index: 49
+  index: 50
   type: mc
-  label: (5) Educación
+  label: (6) Educación
   options:
     Muy justo: '5'
     Justo: '4'
@@ -788,9 +792,9 @@ lucro_2:
     No sé: '98'
     Prefiero no responder: '99'
 lucro_3:
-  index: 50
+  index: 51
   type: mc
-  label: (6) Pensiones
+  label: (7) Pensiones
   options:
     Muy justo: '5'
     Justo: '4'
@@ -800,9 +804,9 @@ lucro_3:
     No sé: '98'
     Prefiero no responder: '99'
 cargo_1:
-  index: 51
+  index: 52
   type: slider
-  label: (7) Salud
+  label: (8) Salud
   options:
     Estado: '1'
     ' ': '2'
@@ -812,9 +816,9 @@ cargo_1:
     '    ': '6'
     Privados: '7'
 cargo_2:
-  index: 52
+  index: 53
   type: slider
-  label: (8) Educación
+  label: (9) Educación
   options:
     Estado: '1'
     ' ': '2'
@@ -824,9 +828,9 @@ cargo_2:
     '    ': '6'
     Privados: '7'
 cargo_3:
-  index: 53
+  index: 54
   type: slider
-  label: (9) Pensiones
+  label: (10) Pensiones
   options:
     Estado: '1'
     ' ': '2'
@@ -836,9 +840,9 @@ cargo_3:
     '    ': '6'
     Privados: '7'
 cargo_4:
-  index: 54
+  index: 55
   type: slider
-  label: (10) Salas cuna
+  label: (11) Salas cuna
   options:
     Estado: '1'
     ' ': '2'
@@ -848,9 +852,9 @@ cargo_4:
     '    ': '6'
     Privados: '7'
 cargo_5:
-  index: 55
+  index: 56
   type: slider
-  label: (11) Carreteras
+  label: (12) Carreteras
   options:
     Estado: '1'
     ' ': '2'
@@ -860,9 +864,9 @@ cargo_5:
     '    ': '6'
     Privados: '7'
 efic_1:
-  index: 56
+  index: 57
   type: slider
-  label: (12) Salud
+  label: (13) Salud
   options:
     Estado: '1'
     ' ': '2'
@@ -872,9 +876,9 @@ efic_1:
     '    ': '6'
     Privados: '7'
 efic_2:
-  index: 57
+  index: 58
   type: slider
-  label: (13) Educación
+  label: (14) Educación
   options:
     Estado: '1'
     ' ': '2'
@@ -884,9 +888,9 @@ efic_2:
     '    ': '6'
     Privados: '7'
 efic_3:
-  index: 58
+  index: 59
   type: slider
-  label: (14) Pensiones
+  label: (15) Pensiones
   options:
     Estado: '1'
     ' ': '2'
@@ -896,9 +900,9 @@ efic_3:
     '    ': '6'
     Privados: '7'
 efic_4:
-  index: 59
+  index: 60
   type: slider
-  label: (15) Salas cuna
+  label: (16) Salas cuna
   options:
     Estado: '1'
     ' ': '2'
@@ -908,9 +912,9 @@ efic_4:
     '    ': '6'
     Privados: '7'
 efic_5:
-  index: 60
+  index: 61
   type: slider
-  label: (16) Carreteras
+  label: (17) Carreteras
   options:
     Estado: '1'
     ' ': '2'
@@ -920,9 +924,9 @@ efic_5:
     '    ': '6'
     Privados: '7'
 part_1:
-  index: 61
+  index: 62
   type: slider
-  label: (17) Salud
+  label: (18) Salud
   options:
     Estado: '1'
     ' ': '2'
@@ -932,9 +936,9 @@ part_1:
     '    ': '6'
     Privados: '7'
 part_2:
-  index: 62
+  index: 63
   type: slider
-  label: (18) Educación
+  label: (19) Educación
   options:
     Estado: '1'
     ' ': '2'
@@ -944,9 +948,9 @@ part_2:
     '    ': '6'
     Privados: '7'
 part_3:
-  index: 63
+  index: 64
   type: slider
-  label: (19) Pensiones
+  label: (20) Pensiones
   options:
     Estado: '1'
     ' ': '2'
@@ -956,9 +960,9 @@ part_3:
     '    ': '6'
     Privados: '7'
 part_4:
-  index: 64
+  index: 65
   type: slider
-  label: (20) Salas cuna
+  label: (21) Salas cuna
   options:
     Estado: '1'
     ' ': '2'
@@ -968,9 +972,9 @@ part_4:
     '    ': '6'
     Privados: '7'
 part_5:
-  index: 65
+  index: 66
   type: slider
-  label: (21) Carreteras
+  label: (22) Carreteras
   options:
     Estado: '1'
     ' ': '2'
@@ -980,9 +984,9 @@ part_5:
     '    ': '6'
     Privados: '7'
 neolib_1:
-  index: 66
+  index: 67
   type: mc
-  label: (22) El Gobierno debería proporcionar a toda la población servicios básicos
+  label: (23) El Gobierno debería proporcionar a toda la población servicios básicos
     como la asistencia sanitaria y la asistencia jurídica de forma gratuita
   options:
     Muy de acuerdo: '5'
@@ -993,9 +997,9 @@ neolib_1:
     No sé: '98'
     Prefiero no responder: '99'
 neolib_2:
-  index: 67
+  index: 68
   type: mc
-  label: (23) Si el Gobierno tiene que aumentar su deuda para ayudar a la gente, debería
+  label: (24) Si el Gobierno tiene que aumentar su deuda para ayudar a la gente, debería
     hacerlo
   options:
     Muy de acuerdo: '5'
@@ -1006,9 +1010,9 @@ neolib_2:
     No sé: '98'
     Prefiero no responder: '99'
 neolib_3:
-  index: 68
+  index: 69
   type: mc
-  label: (24) La sociedad debería proporcionar recursos y servicios gratuitos a las
+  label: (25) La sociedad debería proporcionar recursos y servicios gratuitos a las
     personas que no pueden permitírselos
   options:
     Muy de acuerdo: '5'
@@ -1019,9 +1023,9 @@ neolib_3:
     No sé: '98'
     Prefiero no responder: '99'
 neolib_4:
-  index: 69
+  index: 70
   type: mc
-  label: (25) Las personas con ingresos más elevados deberían pagar más impuestos
+  label: (26) Las personas con ingresos más elevados deberían pagar más impuestos
     que las que tienen ingresos más bajos
   options:
     Muy de acuerdo: '5'
@@ -1032,7 +1036,7 @@ neolib_4:
     No sé: '98'
     Prefiero no responder: '99'
 control_1:
-  index: 70
+  index: 71
   type: mc
   label: (1) Las personas que caen en la pobreza por sus propios errores deberían
     igualmente tener derecho a recibir apoyo del Estado
@@ -1045,7 +1049,7 @@ control_1:
     No sé: '98'
     Prefiero no responder: '99'
 control_2:
-  index: 71
+  index: 72
   type: mc
   label: (2) Quienes son responsables de sus propios problemas igualmente merecen
     recibir beneficios sociales.
@@ -1058,7 +1062,7 @@ control_2:
     No sé: '98'
     Prefiero no responder: '99'
 control_3:
-  index: 72
+  index: 73
   type: mc
   label: (3) El Estado debería ayudar a las personas independientemente de si su situación
     fue causada por decisiones propias o por factores externos.
@@ -1071,7 +1075,7 @@ control_3:
     No sé: '98'
     Prefiero no responder: '99'
 actitud_1:
-  index: 73
+  index: 74
   type: mc
   label: (4) Las personas que reciben beneficios del Estado deberían mostrar más gratitud
     por la ayuda que reciben
@@ -1084,7 +1088,7 @@ actitud_1:
     No sé: '98'
     Prefiero no responder: '99'
 actitud_2:
-  index: 74
+  index: 75
   type: mc
   label: (5) Está bien que las personas que reciben apoyo del Estado puedan expresar
     su descontento con las condiciones de los beneficios.
@@ -1097,7 +1101,7 @@ actitud_2:
     No sé: '98'
     Prefiero no responder: '99'
 reciproc_1:
-  index: 75
+  index: 76
   type: mc
   label: (6) Los beneficios sociales deberían estar reservados para quienes han contribuido
     previamente al sistema, por ejemplo cotizando o pagando impuestos
@@ -1110,7 +1114,7 @@ reciproc_1:
     No sé: '98'
     Prefiero no responder: '99'
 reciproc_2:
-  index: 76
+  index: 77
   type: mc
   label: (7) No es justo que personas que nunca han contribuido al sistema reciban
     los mismos beneficios que quienes sí lo han hecho.
@@ -1123,7 +1127,7 @@ reciproc_2:
     No sé: '98'
     Prefiero no responder: '99'
 reciproc_3:
-  index: 77
+  index: 78
   type: mc
   label: (8) Quienes han trabajado y aportado al sistema durante más tiempo merecen
     mejores beneficios sociales que quienes han contribuido poco o nada
@@ -1136,7 +1140,7 @@ reciproc_3:
     No sé: '98'
     Prefiero no responder: '99'
 actitud_4:
-  index: 78
+  index: 79
   type: mc
   label: (9) El acceso a los beneficios sociales debería ser el mismo para todos,
     independientemente de si han cotizado o no en el pasado.
@@ -1149,7 +1153,7 @@ actitud_4:
     No sé: '98'
     Prefiero no responder: '99'
 id_1:
-  index: 79
+  index: 80
   type: mc
   label: (10) Al momento de asignar beneficios sociales, las personas nacidas en Chile
     deberían tener prioridad por sobre quienes llegaron de otros países.
@@ -1162,7 +1166,7 @@ id_1:
     No sé: '98'
     Prefiero no responder: '99'
 id_2:
-  index: 80
+  index: 81
   type: mc
   label: (11) Los migrantes deberían tener acceso a los mismos beneficios sociales
     que los chilenos.
@@ -1175,7 +1179,7 @@ id_2:
     No sé: '98'
     Prefiero no responder: '99'
 id_3:
-  index: 81
+  index: 82
   type: mc
   label: (12) Solo quienes llevan varios años viviendo en Chile deberían poder acceder
     a los programas de protección social del Estado.
@@ -1188,7 +1192,7 @@ id_3:
     No sé: '98'
     Prefiero no responder: '99'
 nec_1:
-  index: 82
+  index: 83
   type: mc
   label: (13) Los beneficios sociales deberían estar reservados exclusivamente para
     quienes viven en situación de pobreza real.
@@ -1201,7 +1205,7 @@ nec_1:
     No sé: '98'
     Prefiero no responder: '99'
 nec_2:
-  index: 83
+  index: 84
   type: mc
   label: (14) Las personas que tienen suficientes recursos económicos propios no deberían
     recibir apoyo del Estado.
@@ -1214,7 +1218,7 @@ nec_2:
     No sé: '98'
     Prefiero no responder: '99'
 nec_3:
-  index: 84
+  index: 85
   type: mc
   label: (15) Solo quienes se encuentran en situación de extrema necesidad deberían
     poder acceder a los beneficios sociales.
@@ -1227,7 +1231,7 @@ nec_3:
     No sé: '98'
     Prefiero no responder: '99'
 esf_1:
-  index: 85
+  index: 86
   type: mc
   label: (16) Las personas que reciben beneficios sociales deberían estar haciendo
     algo activamente para mejorar su situación, como buscar trabajo o capacitarse
@@ -1240,7 +1244,7 @@ esf_1:
     No sé: '98'
     Prefiero no responder: '99'
 esf_2:
-  index: 86
+  index: 87
   type: mc
   label: (17) Quienes reciben ayuda del Estado pero no hacen ningún esfuerzo por salir
     adelante merecen menos apoyo que quienes sí lo intentan
@@ -1253,7 +1257,7 @@ esf_2:
     No sé: '98'
     Prefiero no responder: '99'
 esf_3:
-  index: 87
+  index: 88
   type: mc
   label: (18) El Estado debería apoyar a las personas aunque no estén haciendo ningún
     esfuerzo visible por cambiar su situación
@@ -1266,7 +1270,7 @@ esf_3:
     No sé: '98'
     Prefiero no responder: '99'
 esf_4:
-  index: 88
+  index: 89
   type: mc
   label: (19) Es razonable que la duración de un beneficio social dependa del esfuerzo
     que está haciendo la persona para dejar de necesitarlo
@@ -1279,7 +1283,7 @@ esf_4:
     No sé: '98'
     Prefiero no responder: '99'
 esf_5:
-  index: 89
+  index: 90
   type: mc
   label: '(20) No importa si alguien está buscando trabajo o no: si necesita ayuda,
     el Estado debería dársela igual'
@@ -1292,7 +1296,7 @@ esf_5:
     No sé: '98'
     Prefiero no responder: '99'
 adc_qstn:
-  index: 90
+  index: 91
   type: mc
   label: (21) ¿Cuál de las siguientes afirmaciones describe mejor su situación actual,
     considerando el total de ingresos que tiene actualmente?
@@ -1304,7 +1308,7 @@ adc_qstn:
     No sé: '98'
     Prefiero no responder: '99'
 adc_5:
-  index: 91
+  index: 92
   type: mc
   label: (22) Que mi situación financiera empeore los próximos años.
   options:
@@ -1316,7 +1320,7 @@ adc_5:
     No sé: '98'
     Prefiero no responder: '99'
 adc_6:
-  index: 92
+  index: 93
   type: mc
   label: (23) Quedar desempleado
   options:
@@ -1328,7 +1332,7 @@ adc_6:
     No sé: '98'
     Prefiero no responder: '99'
 adc_7:
-  index: 93
+  index: 94
   type: mc
   label: (24) Que mis hijos/as y las próximas generaciones lo tendrán mucho más difícil
   options:
@@ -1340,7 +1344,7 @@ adc_7:
     No sé: '98'
     Prefiero no responder: '99'
 gender:
-  index: 94
+  index: 95
   type: select
   label: ¿Cuál es su identidad de género?
   options:
@@ -1351,7 +1355,7 @@ gender:
     Mujer trans: trans_female
     Prefiero no responder: '99'
 income:
-  index: 95
+  index: 96
   type: select
   label: ¿Cuál es su ingreso anual del hogar (de todas las fuentes) antes de impuestos
     y otras deducciones?
@@ -1369,14 +1373,14 @@ income:
     No sé: '98'
     Prefiero no responder: '99'
 salud_prov:
-  index: 96
+  index: 97
   type: mc
   label: ¿Qué plan de salud tiene?
   options:
     FONASA: fonasa
     ISAPRE: isapre
 educ_prov:
-  index: 97
+  index: 98
   type: mc
   label: ¿En qué tipo de colegio estudió?
   options:

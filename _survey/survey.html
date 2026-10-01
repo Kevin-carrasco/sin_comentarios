@@ -4873,8 +4873,8 @@ setInterval(function() {
 <tbody>
 <tr class="odd">
 <td style="text-align: left; font-weight: bold;">Postulante:</td>
-<td style="text-align: left;"><span style="color: #28a745; font-weight: 800;">Lucas</span></td>
-<td style="text-align: left;"><span style="color: #007bff; font-weight: 800;">Florencia</span></td>
+<td style="text-align: left;"><span style="color: #28a745; font-weight: 800;">Daniel</span></td>
+<td style="text-align: left;"><span style="color: #007bff; font-weight: 800;">Antonia</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left; font-weight: bold;">Su hogar llega a fin de mes con:</td>
@@ -4928,7 +4928,7 @@ setInterval(function() {
 <div id="cbc_practice_shade1" style="position: absolute; left: 0; right: 0; bottom: 0; height: 50%; background: rgba(40, 167, 69, 0.18); pointer-events: none; transition: height 120ms linear; z-index: 0;"></div>
 <div style="position: relative; z-index: 1;">
 <h4 style="margin: 0 0 4px 0; font-size: 0.9rem;" class="anchored">
-<span id="cbc_practice_name1" style="color: #28a745; font-weight: 800;">Lucas</span>
+<span id="cbc_practice_name1" style="color: #28a745; font-weight: 800;">Daniel</span>
 </h4>
 <h3 style="color: #28a745; margin: 4px 0; font-weight: 900; font-size: 1.1rem;" class="anchored" data-anchor-id="módulo-tarea-de-asignación-de-becas">
 <span id="cbc_practice_opt1" style>$1.000.000</span>
@@ -4942,7 +4942,7 @@ setInterval(function() {
 <div id="cbc_practice_shade2" style="position: absolute; left: 0; right: 0; bottom: 0; height: 50%; background: rgba(0, 123, 255, 0.18); pointer-events: none; transition: height 120ms linear; z-index: 0;"></div>
 <div style="position: relative; z-index: 1;">
 <h4 style="margin: 0 0 4px 0; font-size: 0.9rem;" class="anchored">
-<span id="cbc_practice_name2" style="color: #007bff; font-weight: 800;">Florencia</span>
+<span id="cbc_practice_name2" style="color: #007bff; font-weight: 800;">Antonia</span>
 </h4>
 <h3 style="color: #007bff; margin: 4px 0; font-weight: 900; font-size: 1.1rem;" class="anchored">
 <span id="cbc_practice_opt2" style>$1.000.000</span>
@@ -5977,6 +5977,19 @@ setInterval(function() {
 </div>
 </div>
 <div class="cell-output-display">
+<div id="sd-nav-marker" style="display: none;"></div>
+<div data-next-page="prospective" style="margin-top: 1rem; margin-bottom: 0.5rem;" class="sd-nav-container">
+<button class="btn btn-default action-button sd-nav-button sd-nav-prev" id="page_id_prev" onclick="Shiny.setInputValue(&#39;prev_page&#39;, true, {priority: &#39;event&#39;});" style="float: left;" type="button">← Anterior</button>
+<button class="btn btn-default action-button sd-enter-button sd-nav-button sd-nav-next" id="page_id_next" onclick="Shiny.setInputValue(&#39;next_page&#39;, this.parentElement.getAttribute(&#39;data-next-page&#39;));" style="float: right;" type="button">Siguiente</button>
+<div style="clear: both;"></div>
+</div>
+</div>
+</div>
+</div>
+<div id="prospective" class="sd_page">
+<p>¿En qué medida considera justo o injusto las siguientes afirmaciones?</p>
+<div class="cell">
+<div class="cell-output-display">
 <div id="container-proy_1" data-question-id="proy_1" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;proy_1_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;proy_1_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div id="proy_1" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="proy_1-label">
 <label class="control-label" id="proy_1-label" for="proy_1"><p>(7) Está bien que <strong>mis hijos/as</strong> tengan acceso a una mejor salud que otros niños si es que puedo pagar por ello</p>
@@ -6293,7 +6306,17 @@ setInterval(function() {
 <span class="hidden-asterisk">*</span>
 </div>
 </div>
+<div class="cell-output-display">
+<div id="sd-nav-marker" style="display: none;"></div>
+<div data-next-page="actgov" style="margin-top: 1rem; margin-bottom: 0.5rem;" class="sd-nav-container">
+<button class="btn btn-default action-button sd-nav-button sd-nav-prev" id="page_id_prev" onclick="Shiny.setInputValue(&#39;prev_page&#39;, true, {priority: &#39;event&#39;});" style="float: left;" type="button">← Anterior</button>
+<button class="btn btn-default action-button sd-enter-button sd-nav-button sd-nav-next" id="page_id_next" onclick="Shiny.setInputValue(&#39;next_page&#39;, this.parentElement.getAttribute(&#39;data-next-page&#39;));" style="float: right;" type="button">Siguiente</button>
+<div style="clear: both;"></div>
 </div>
+</div>
+</div>
+</div>
+<div id="actgov" class="sd_page">
 <p>A continuación, se mencionan algunos ámbitos de la actividad gubernamental. Por favor, señale si le gustaría que se aumentara o se redujera el gasto público en cada uno de ellos. Tenga en cuenta que «más» o «mucho más» podría implicar un alza de impuestos.</p>
 <p>En qué medida le gustaría que hubiera más o menos gasto público en…</p>
 <div class="cell">
@@ -7284,9 +7307,21 @@ setInterval(function() {
 </div>
 <div class="cell">
 <div class="cell-output-display">
+<div id="container-dec_1_hist" data-question-id="dec_1_hist" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;dec_1_hist_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;dec_1_hist_interacted&#39;, true, {priority: &#39;event&#39;});">
+<div class="form-group shiny-input-container">
+<label class="control-label" id="dec_1_hist-label" for="dec_1_hist"><p>(3)</p>
+</label>
+<input id="dec_1_hist" type="text" class="shiny-input-text form-control" value>
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
 <div id="container-dec_2" data-question-id="dec_2" class="question-container" style="width: 100%;">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="dec_2-label" for="dec_2"><p>(3) Para que esos alumnos puedan ser admitidos en el colegio, ¿cuánto más estaría dispuesto a pagar de la mensualidad para poder apoyar a estudiantes que no pagan?</p>
+<label class="control-label" id="dec_2-label" for="dec_2"><p>(4) Para que esos alumnos puedan ser admitidos en el colegio, ¿cuánto más estaría dispuesto a pagar de la mensualidad para poder apoyar a estudiantes que no pagan?</p>
 </label>
 <input class="js-range-slider sw-slider-text" data-data-type="text" data-force-edges="true" data-from="0" data-from-fixed="false" data-from-shadow="false" data-grid="true" data-hide-min-max="false" data-keyboard="true" data-prettify-enabled="false" data-skin="shiny" data-swvalues="[&quot;0&quot;,&quot;10%&quot;,&quot;20%&quot;,&quot;30%&quot;,&quot;40%&quot;,&quot;50%&quot;,&quot;60%&quot;,&quot;70%&quot;,&quot;80%&quot;,&quot;90%&quot;,&quot;100%&quot;]" data-to-fixed="false" data-to-shadow="false" id="dec_2">
 <script>
@@ -7342,7 +7377,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-lucro_1" data-question-id="lucro_1" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;lucro_1_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;lucro_1_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div id="lucro_1" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="lucro_1-label">
-<label class="control-label" id="lucro_1-label" for="lucro_1"><p>(4) Salud</p>
+<label class="control-label" id="lucro_1-label" for="lucro_1"><p>(5) Salud</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -7395,7 +7430,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-lucro_2" data-question-id="lucro_2" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;lucro_2_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;lucro_2_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div id="lucro_2" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="lucro_2-label">
-<label class="control-label" id="lucro_2-label" for="lucro_2"><p>(5) Educación</p>
+<label class="control-label" id="lucro_2-label" for="lucro_2"><p>(6) Educación</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -7448,7 +7483,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-lucro_3" data-question-id="lucro_3" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;lucro_3_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;lucro_3_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div id="lucro_3" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="lucro_3-label">
-<label class="control-label" id="lucro_3-label" for="lucro_3"><p>(6) Pensiones</p>
+<label class="control-label" id="lucro_3-label" for="lucro_3"><p>(7) Pensiones</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -7516,7 +7551,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-cargo_1" data-question-id="cargo_1" class="question-container" style="width: 100%;">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="cargo_1-label" for="cargo_1"><p>(7) Salud</p>
+<label class="control-label" id="cargo_1-label" for="cargo_1"><p>(8) Salud</p>
 </label>
 <input class="js-range-slider sw-slider-text" data-data-type="text" data-force-edges="true" data-from="3" data-from-fixed="false" data-from-shadow="false" data-grid="true" data-hide-min-max="false" data-keyboard="true" data-prettify-enabled="false" data-skin="shiny" data-swvalues="[&quot;Estado&quot;,&quot; &quot;,&quot;  &quot;,&quot;Ambos por igual&quot;,&quot;   &quot;,&quot;    &quot;,&quot;Privados&quot;]" data-to-fixed="false" data-to-shadow="false" id="cargo_1">
 <script>
@@ -7555,7 +7590,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-cargo_2" data-question-id="cargo_2" class="question-container" style="width: 100%;">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="cargo_2-label" for="cargo_2"><p>(8) Educación</p>
+<label class="control-label" id="cargo_2-label" for="cargo_2"><p>(9) Educación</p>
 </label>
 <input class="js-range-slider sw-slider-text" data-data-type="text" data-force-edges="true" data-from="3" data-from-fixed="false" data-from-shadow="false" data-grid="true" data-hide-min-max="false" data-keyboard="true" data-prettify-enabled="false" data-skin="shiny" data-swvalues="[&quot;Estado&quot;,&quot; &quot;,&quot;  &quot;,&quot;Ambos por igual&quot;,&quot;   &quot;,&quot;    &quot;,&quot;Privados&quot;]" data-to-fixed="false" data-to-shadow="false" id="cargo_2">
 <script>
@@ -7594,7 +7629,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-cargo_3" data-question-id="cargo_3" class="question-container" style="width: 100%;">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="cargo_3-label" for="cargo_3"><p>(9) Pensiones</p>
+<label class="control-label" id="cargo_3-label" for="cargo_3"><p>(10) Pensiones</p>
 </label>
 <input class="js-range-slider sw-slider-text" data-data-type="text" data-force-edges="true" data-from="3" data-from-fixed="false" data-from-shadow="false" data-grid="true" data-hide-min-max="false" data-keyboard="true" data-prettify-enabled="false" data-skin="shiny" data-swvalues="[&quot;Estado&quot;,&quot; &quot;,&quot;  &quot;,&quot;Ambos por igual&quot;,&quot;   &quot;,&quot;    &quot;,&quot;Privados&quot;]" data-to-fixed="false" data-to-shadow="false" id="cargo_3">
 <script>
@@ -7633,7 +7668,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-cargo_4" data-question-id="cargo_4" class="question-container" style="width: 100%;">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="cargo_4-label" for="cargo_4"><p>(10) Salas cuna</p>
+<label class="control-label" id="cargo_4-label" for="cargo_4"><p>(11) Salas cuna</p>
 </label>
 <input class="js-range-slider sw-slider-text" data-data-type="text" data-force-edges="true" data-from="3" data-from-fixed="false" data-from-shadow="false" data-grid="true" data-hide-min-max="false" data-keyboard="true" data-prettify-enabled="false" data-skin="shiny" data-swvalues="[&quot;Estado&quot;,&quot; &quot;,&quot;  &quot;,&quot;Ambos por igual&quot;,&quot;   &quot;,&quot;    &quot;,&quot;Privados&quot;]" data-to-fixed="false" data-to-shadow="false" id="cargo_4">
 <script>
@@ -7672,7 +7707,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-cargo_5" data-question-id="cargo_5" class="question-container" style="width: 100%;">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="cargo_5-label" for="cargo_5"><p>(11) Carreteras</p>
+<label class="control-label" id="cargo_5-label" for="cargo_5"><p>(12) Carreteras</p>
 </label>
 <input class="js-range-slider sw-slider-text" data-data-type="text" data-force-edges="true" data-from="3" data-from-fixed="false" data-from-shadow="false" data-grid="true" data-hide-min-max="false" data-keyboard="true" data-prettify-enabled="false" data-skin="shiny" data-swvalues="[&quot;Estado&quot;,&quot; &quot;,&quot;  &quot;,&quot;Ambos por igual&quot;,&quot;   &quot;,&quot;    &quot;,&quot;Privados&quot;]" data-to-fixed="false" data-to-shadow="false" id="cargo_5">
 <script>
@@ -7715,7 +7750,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-efic_1" data-question-id="efic_1" class="question-container" style="width: 100%;">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="efic_1-label" for="efic_1"><p>(12) Salud</p>
+<label class="control-label" id="efic_1-label" for="efic_1"><p>(13) Salud</p>
 </label>
 <input class="js-range-slider sw-slider-text" data-data-type="text" data-force-edges="true" data-from="3" data-from-fixed="false" data-from-shadow="false" data-grid="true" data-hide-min-max="false" data-keyboard="true" data-prettify-enabled="false" data-skin="shiny" data-swvalues="[&quot;Estado&quot;,&quot; &quot;,&quot;  &quot;,&quot;Ambos por igual&quot;,&quot;   &quot;,&quot;    &quot;,&quot;Privados&quot;]" data-to-fixed="false" data-to-shadow="false" id="efic_1">
 <script>
@@ -7754,7 +7789,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-efic_2" data-question-id="efic_2" class="question-container" style="width: 100%;">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="efic_2-label" for="efic_2"><p>(13) Educación</p>
+<label class="control-label" id="efic_2-label" for="efic_2"><p>(14) Educación</p>
 </label>
 <input class="js-range-slider sw-slider-text" data-data-type="text" data-force-edges="true" data-from="3" data-from-fixed="false" data-from-shadow="false" data-grid="true" data-hide-min-max="false" data-keyboard="true" data-prettify-enabled="false" data-skin="shiny" data-swvalues="[&quot;Estado&quot;,&quot; &quot;,&quot;  &quot;,&quot;Ambos por igual&quot;,&quot;   &quot;,&quot;    &quot;,&quot;Privados&quot;]" data-to-fixed="false" data-to-shadow="false" id="efic_2">
 <script>
@@ -7793,7 +7828,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-efic_3" data-question-id="efic_3" class="question-container" style="width: 100%;">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="efic_3-label" for="efic_3"><p>(14) Pensiones</p>
+<label class="control-label" id="efic_3-label" for="efic_3"><p>(15) Pensiones</p>
 </label>
 <input class="js-range-slider sw-slider-text" data-data-type="text" data-force-edges="true" data-from="3" data-from-fixed="false" data-from-shadow="false" data-grid="true" data-hide-min-max="false" data-keyboard="true" data-prettify-enabled="false" data-skin="shiny" data-swvalues="[&quot;Estado&quot;,&quot; &quot;,&quot;  &quot;,&quot;Ambos por igual&quot;,&quot;   &quot;,&quot;    &quot;,&quot;Privados&quot;]" data-to-fixed="false" data-to-shadow="false" id="efic_3">
 <script>
@@ -7832,7 +7867,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-efic_4" data-question-id="efic_4" class="question-container" style="width: 100%;">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="efic_4-label" for="efic_4"><p>(15) Salas cuna</p>
+<label class="control-label" id="efic_4-label" for="efic_4"><p>(16) Salas cuna</p>
 </label>
 <input class="js-range-slider sw-slider-text" data-data-type="text" data-force-edges="true" data-from="3" data-from-fixed="false" data-from-shadow="false" data-grid="true" data-hide-min-max="false" data-keyboard="true" data-prettify-enabled="false" data-skin="shiny" data-swvalues="[&quot;Estado&quot;,&quot; &quot;,&quot;  &quot;,&quot;Ambos por igual&quot;,&quot;   &quot;,&quot;    &quot;,&quot;Privados&quot;]" data-to-fixed="false" data-to-shadow="false" id="efic_4">
 <script>
@@ -7871,7 +7906,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-efic_5" data-question-id="efic_5" class="question-container" style="width: 100%;">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="efic_5-label" for="efic_5"><p>(16) Carreteras</p>
+<label class="control-label" id="efic_5-label" for="efic_5"><p>(17) Carreteras</p>
 </label>
 <input class="js-range-slider sw-slider-text" data-data-type="text" data-force-edges="true" data-from="3" data-from-fixed="false" data-from-shadow="false" data-grid="true" data-hide-min-max="false" data-keyboard="true" data-prettify-enabled="false" data-skin="shiny" data-swvalues="[&quot;Estado&quot;,&quot; &quot;,&quot;  &quot;,&quot;Ambos por igual&quot;,&quot;   &quot;,&quot;    &quot;,&quot;Privados&quot;]" data-to-fixed="false" data-to-shadow="false" id="efic_5">
 <script>
@@ -7914,7 +7949,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-part_1" data-question-id="part_1" class="question-container" style="width: 100%;">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="part_1-label" for="part_1"><p>(17) Salud</p>
+<label class="control-label" id="part_1-label" for="part_1"><p>(18) Salud</p>
 </label>
 <input class="js-range-slider sw-slider-text" data-data-type="text" data-force-edges="true" data-from="3" data-from-fixed="false" data-from-shadow="false" data-grid="true" data-hide-min-max="false" data-keyboard="true" data-prettify-enabled="false" data-skin="shiny" data-swvalues="[&quot;Estado&quot;,&quot; &quot;,&quot;  &quot;,&quot;Ambos por igual&quot;,&quot;   &quot;,&quot;    &quot;,&quot;Privados&quot;]" data-to-fixed="false" data-to-shadow="false" id="part_1">
 <script>
@@ -7953,7 +7988,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-part_2" data-question-id="part_2" class="question-container" style="width: 100%;">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="part_2-label" for="part_2"><p>(18) Educación</p>
+<label class="control-label" id="part_2-label" for="part_2"><p>(19) Educación</p>
 </label>
 <input class="js-range-slider sw-slider-text" data-data-type="text" data-force-edges="true" data-from="3" data-from-fixed="false" data-from-shadow="false" data-grid="true" data-hide-min-max="false" data-keyboard="true" data-prettify-enabled="false" data-skin="shiny" data-swvalues="[&quot;Estado&quot;,&quot; &quot;,&quot;  &quot;,&quot;Ambos por igual&quot;,&quot;   &quot;,&quot;    &quot;,&quot;Privados&quot;]" data-to-fixed="false" data-to-shadow="false" id="part_2">
 <script>
@@ -7992,7 +8027,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-part_3" data-question-id="part_3" class="question-container" style="width: 100%;">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="part_3-label" for="part_3"><p>(19) Pensiones</p>
+<label class="control-label" id="part_3-label" for="part_3"><p>(20) Pensiones</p>
 </label>
 <input class="js-range-slider sw-slider-text" data-data-type="text" data-force-edges="true" data-from="3" data-from-fixed="false" data-from-shadow="false" data-grid="true" data-hide-min-max="false" data-keyboard="true" data-prettify-enabled="false" data-skin="shiny" data-swvalues="[&quot;Estado&quot;,&quot; &quot;,&quot;  &quot;,&quot;Ambos por igual&quot;,&quot;   &quot;,&quot;    &quot;,&quot;Privados&quot;]" data-to-fixed="false" data-to-shadow="false" id="part_3">
 <script>
@@ -8031,7 +8066,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-part_4" data-question-id="part_4" class="question-container" style="width: 100%;">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="part_4-label" for="part_4"><p>(20) Salas cuna</p>
+<label class="control-label" id="part_4-label" for="part_4"><p>(21) Salas cuna</p>
 </label>
 <input class="js-range-slider sw-slider-text" data-data-type="text" data-force-edges="true" data-from="3" data-from-fixed="false" data-from-shadow="false" data-grid="true" data-hide-min-max="false" data-keyboard="true" data-prettify-enabled="false" data-skin="shiny" data-swvalues="[&quot;Estado&quot;,&quot; &quot;,&quot;  &quot;,&quot;Ambos por igual&quot;,&quot;   &quot;,&quot;    &quot;,&quot;Privados&quot;]" data-to-fixed="false" data-to-shadow="false" id="part_4">
 <script>
@@ -8070,7 +8105,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-part_5" data-question-id="part_5" class="question-container" style="width: 100%;">
 <div class="form-group shiny-input-container">
-<label class="control-label" id="part_5-label" for="part_5"><p>(21) Carreteras</p>
+<label class="control-label" id="part_5-label" for="part_5"><p>(22) Carreteras</p>
 </label>
 <input class="js-range-slider sw-slider-text" data-data-type="text" data-force-edges="true" data-from="3" data-from-fixed="false" data-from-shadow="false" data-grid="true" data-hide-min-max="false" data-keyboard="true" data-prettify-enabled="false" data-skin="shiny" data-swvalues="[&quot;Estado&quot;,&quot; &quot;,&quot;  &quot;,&quot;Ambos por igual&quot;,&quot;   &quot;,&quot;    &quot;,&quot;Privados&quot;]" data-to-fixed="false" data-to-shadow="false" id="part_5">
 <script>
@@ -8125,7 +8160,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-neolib_1" data-question-id="neolib_1" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;neolib_1_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;neolib_1_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div id="neolib_1" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="neolib_1-label">
-<label class="control-label" id="neolib_1-label" for="neolib_1"><p>(22) El Gobierno debería proporcionar a toda la población servicios básicos como la asistencia sanitaria y la asistencia jurídica de forma gratuita</p>
+<label class="control-label" id="neolib_1-label" for="neolib_1"><p>(23) El Gobierno debería proporcionar a toda la población servicios básicos como la asistencia sanitaria y la asistencia jurídica de forma gratuita</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -8178,7 +8213,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-neolib_2" data-question-id="neolib_2" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;neolib_2_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;neolib_2_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div id="neolib_2" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="neolib_2-label">
-<label class="control-label" id="neolib_2-label" for="neolib_2"><p>(23) Si el Gobierno tiene que aumentar su deuda para ayudar a la gente, debería hacerlo</p>
+<label class="control-label" id="neolib_2-label" for="neolib_2"><p>(24) Si el Gobierno tiene que aumentar su deuda para ayudar a la gente, debería hacerlo</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -8231,7 +8266,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-neolib_3" data-question-id="neolib_3" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;neolib_3_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;neolib_3_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div id="neolib_3" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="neolib_3-label">
-<label class="control-label" id="neolib_3-label" for="neolib_3"><p>(24) La sociedad debería proporcionar recursos y servicios gratuitos a las personas que no pueden permitírselos</p>
+<label class="control-label" id="neolib_3-label" for="neolib_3"><p>(25) La sociedad debería proporcionar recursos y servicios gratuitos a las personas que no pueden permitírselos</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -8284,7 +8319,7 @@ setInterval(function() {
 <div class="cell-output-display">
 <div id="container-neolib_4" data-question-id="neolib_4" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;neolib_4_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;neolib_4_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div id="neolib_4" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="neolib_4-label">
-<label class="control-label" id="neolib_4-label" for="neolib_4"><p>(25) Las personas con ingresos más elevados deberían pagar más impuestos que las que tienen ingresos más bajos</p>
+<label class="control-label" id="neolib_4-label" for="neolib_4"><p>(26) Las personas con ingresos más elevados deberían pagar más impuestos que las que tienen ingresos más bajos</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -8511,6 +8546,20 @@ setInterval(function() {
 </div>
 </div>
 <div class="cell-output-display">
+<div id="sd-nav-marker" style="display: none;"></div>
+<div data-next-page="deserve-2" style="margin-top: 1rem; margin-bottom: 0.5rem;" class="sd-nav-container">
+<button class="btn btn-default action-button sd-nav-button sd-nav-prev" id="page_id_prev" onclick="Shiny.setInputValue(&#39;prev_page&#39;, true, {priority: &#39;event&#39;});" style="float: left;" type="button">← Anterior</button>
+<button class="btn btn-default action-button sd-enter-button sd-nav-button sd-nav-next" id="page_id_next" onclick="Shiny.setInputValue(&#39;next_page&#39;, this.parentElement.getAttribute(&#39;data-next-page&#39;));" style="float: right;" type="button">Siguiente</button>
+<div style="clear: both;"></div>
+</div>
+</div>
+</div>
+
+</div>
+<div id="deserve-2" class="sd_page">
+<p>¿En qué medida está de acuerdo o en desacuerdo con las siguientes afirmaciones?</p>
+<div class="cell">
+<div class="cell-output-display">
 <div id="container-actitud_1" data-question-id="actitud_1" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;actitud_1_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;actitud_1_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div id="actitud_1" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="actitud_1-label">
 <label class="control-label" id="actitud_1-label" for="actitud_1"><p>(4) Las personas que reciben beneficios del Estado deberían mostrar más gratitud por la ayuda que reciben</p>
@@ -8618,16 +8667,15 @@ setInterval(function() {
 </div>
 <div class="cell-output-display">
 <div id="sd-nav-marker" style="display: none;"></div>
-<div data-next-page="deserve-2" style="margin-top: 1rem; margin-bottom: 0.5rem;" class="sd-nav-container">
+<div data-next-page="deserve-3" style="margin-top: 1rem; margin-bottom: 0.5rem;" class="sd-nav-container">
 <button class="btn btn-default action-button sd-nav-button sd-nav-prev" id="page_id_prev" onclick="Shiny.setInputValue(&#39;prev_page&#39;, true, {priority: &#39;event&#39;});" style="float: left;" type="button">← Anterior</button>
 <button class="btn btn-default action-button sd-enter-button sd-nav-button sd-nav-next" id="page_id_next" onclick="Shiny.setInputValue(&#39;next_page&#39;, this.parentElement.getAttribute(&#39;data-next-page&#39;));" style="float: right;" type="button">Siguiente</button>
 <div style="clear: both;"></div>
 </div>
 </div>
 </div>
-
 </div>
-<div id="deserve-2" class="sd_page">
+<div id="deserve-3" class="sd_page">
 <p>¿En qué medida está de acuerdo o en desacuerdo con las siguientes afirmaciones?</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -8843,6 +8891,19 @@ setInterval(function() {
 </div>
 </div>
 <div class="cell-output-display">
+<div id="sd-nav-marker" style="display: none;"></div>
+<div data-next-page="deserve-4" style="margin-top: 1rem; margin-bottom: 0.5rem;" class="sd-nav-container">
+<button class="btn btn-default action-button sd-nav-button sd-nav-prev" id="page_id_prev" onclick="Shiny.setInputValue(&#39;prev_page&#39;, true, {priority: &#39;event&#39;});" style="float: left;" type="button">← Anterior</button>
+<button class="btn btn-default action-button sd-enter-button sd-nav-button sd-nav-next" id="page_id_next" onclick="Shiny.setInputValue(&#39;next_page&#39;, this.parentElement.getAttribute(&#39;data-next-page&#39;));" style="float: right;" type="button">Siguiente</button>
+<div style="clear: both;"></div>
+</div>
+</div>
+</div>
+</div>
+<div id="deserve-4" class="sd_page">
+<p>¿En qué medida está de acuerdo o en desacuerdo con las siguientes afirmaciones?</p>
+<div class="cell">
+<div class="cell-output-display">
 <div id="container-id_1" data-question-id="id_1" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;id_1_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;id_1_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div id="id_1" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="id_1-label">
 <label class="control-label" id="id_1-label" for="id_1"><p>(10) Al momento de asignar beneficios sociales, las personas nacidas en Chile deberían tener prioridad por sobre quienes llegaron de otros países.</p>
@@ -9003,7 +9064,7 @@ setInterval(function() {
 </div>
 <div class="cell-output-display">
 <div id="sd-nav-marker" style="display: none;"></div>
-<div data-next-page="deserve-3" style="margin-top: 1rem; margin-bottom: 0.5rem;" class="sd-nav-container">
+<div data-next-page="deserve-5" style="margin-top: 1rem; margin-bottom: 0.5rem;" class="sd-nav-container">
 <button class="btn btn-default action-button sd-nav-button sd-nav-prev" id="page_id_prev" onclick="Shiny.setInputValue(&#39;prev_page&#39;, true, {priority: &#39;event&#39;});" style="float: left;" type="button">← Anterior</button>
 <button class="btn btn-default action-button sd-enter-button sd-nav-button sd-nav-next" id="page_id_next" onclick="Shiny.setInputValue(&#39;next_page&#39;, this.parentElement.getAttribute(&#39;data-next-page&#39;));" style="float: right;" type="button">Siguiente</button>
 <div style="clear: both;"></div>
@@ -9011,7 +9072,7 @@ setInterval(function() {
 </div>
 </div>
 </div>
-<div id="deserve-3" class="sd_page">
+<div id="deserve-5" class="sd_page">
 <p>¿En qué medida está de acuerdo o en desacuerdo con las siguientes afirmaciones?</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -9173,6 +9234,19 @@ setInterval(function() {
 <span class="hidden-asterisk">*</span>
 </div>
 </div>
+<div class="cell-output-display">
+<div id="sd-nav-marker" style="display: none;"></div>
+<div data-next-page="deserve-6" style="margin-top: 1rem; margin-bottom: 0.5rem;" class="sd-nav-container">
+<button class="btn btn-default action-button sd-nav-button sd-nav-prev" id="page_id_prev" onclick="Shiny.setInputValue(&#39;prev_page&#39;, true, {priority: &#39;event&#39;});" style="float: left;" type="button">← Anterior</button>
+<button class="btn btn-default action-button sd-enter-button sd-nav-button sd-nav-next" id="page_id_next" onclick="Shiny.setInputValue(&#39;next_page&#39;, this.parentElement.getAttribute(&#39;data-next-page&#39;));" style="float: right;" type="button">Siguiente</button>
+<div style="clear: both;"></div>
+</div>
+</div>
+</div>
+</div>
+<div id="deserve-6" class="sd_page">
+<p>¿En qué medida está de acuerdo o en desacuerdo con las siguientes afirmaciones?</p>
+<div class="cell">
 <div class="cell-output-display">
 <div id="container-esf_1" data-question-id="esf_1" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue(&#39;esf_1_interacted&#39;, true, {priority: &#39;event&#39;});" onclick="Shiny.setInputValue(&#39;esf_1_interacted&#39;, true, {priority: &#39;event&#39;});">
 <div id="esf_1" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="esf_1-label">
@@ -9440,7 +9514,7 @@ setInterval(function() {
 </div>
 <div class="cell-output-display">
 <div id="sd-nav-marker" style="display: none;"></div>
-<div data-next-page="deserve-4" style="margin-top: 1rem; margin-bottom: 0.5rem;" class="sd-nav-container">
+<div data-next-page="deserve-7" style="margin-top: 1rem; margin-bottom: 0.5rem;" class="sd-nav-container">
 <button class="btn btn-default action-button sd-nav-button sd-nav-prev" id="page_id_prev" onclick="Shiny.setInputValue(&#39;prev_page&#39;, true, {priority: &#39;event&#39;});" style="float: left;" type="button">← Anterior</button>
 <button class="btn btn-default action-button sd-enter-button sd-nav-button sd-nav-next" id="page_id_next" onclick="Shiny.setInputValue(&#39;next_page&#39;, this.parentElement.getAttribute(&#39;data-next-page&#39;));" style="float: right;" type="button">Siguiente</button>
 <div style="clear: both;"></div>
@@ -9448,7 +9522,7 @@ setInterval(function() {
 </div>
 </div>
 </div>
-<div id="deserve-4" class="sd_page">
+<div id="deserve-7" class="sd_page">
 <p>Responda las siguientes preguntas a partir de su situación socioeconómica actual.</p>
 <div class="cell">
 <div class="cell-output-display">

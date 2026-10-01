@@ -1000,6 +1000,15 @@ sd_question(
   )
 )
 
+sd_nav(page_next = "prospective",
+  label_next = "Siguiente")
+```
+
+--- prospective
+
+¿En qué medida considera justo o injusto las siguientes afirmaciones?
+
+```{r}
 sd_question(
   type  = 'mc',
   id    = 'proy_1',
@@ -1070,7 +1079,12 @@ sd_question(
     "5°" = "5"
   )
 )
+
+sd_nav(page_next = "actgov",
+  label_next = "Siguiente")
 ```
+
+--- actgov
 
 A continuación, se mencionan algunos ámbitos de la actividad gubernamental. Por favor, señale si le gustaría que se aumentara o se redujera el gasto público en cada uno de ellos. Tenga en cuenta que «más» o «mucho más» podría implicar un alza de impuestos.
 
@@ -1348,6 +1362,11 @@ sd_question(
   ),
   selected = '0'
 )
+```
+
+```{r}
+# Oculta: app.R la llena con cada posición en que se detuvo el slider de dec_1
+sd_question(type = "text", id = "dec_1_hist", label = "")
 ```
 
 ```{r}
@@ -1673,6 +1692,15 @@ sd_question(
   option = escala_acuerdo_nsnr
 )
 
+sd_nav(page_next = "deserve-2",
+  label_next = "Siguiente")
+```
+
+--- deserve-2
+
+¿En qué medida está de acuerdo o en desacuerdo con las siguientes afirmaciones?
+
+```{r}
 sd_question(
   type  = 'mc',
   id    = 'actitud_1',
@@ -1687,11 +1715,11 @@ sd_question(
   option = escala_acuerdo_nsnr
 )
 
-sd_nav(page_next = "deserve-2",
+sd_nav(page_next = "deserve-3",
   label_next = "Siguiente")
 ```
 
---- deserve-2
+--- deserve-3
 
 ¿En qué medida está de acuerdo o en desacuerdo con las siguientes afirmaciones?
 
@@ -1724,6 +1752,16 @@ sd_question(
   option = escala_acuerdo_nsnr
 )
 
+sd_nav(page_next = "deserve-4",
+  label_next = "Siguiente")
+```
+
+
+--- deserve-4
+
+¿En qué medida está de acuerdo o en desacuerdo con las siguientes afirmaciones?
+
+```{r}
 sd_question(
   type  = 'mc',
   id    = 'id_1',
@@ -1745,12 +1783,12 @@ sd_question(
   option = escala_acuerdo_nsnr
 )
 
-sd_nav(page_next = "deserve-3",
+sd_nav(page_next = "deserve-5",
   label_next = "Siguiente")
 ```
 
 
---- deserve-3
+--- deserve-5
 
 ¿En qué medida está de acuerdo o en desacuerdo con las siguientes afirmaciones?
 
@@ -1776,6 +1814,15 @@ sd_question(
   option = escala_acuerdo_nsnr
 )
 
+sd_nav(page_next = "deserve-6",
+  label_next = "Siguiente")
+```
+
+--- deserve-6
+
+¿En qué medida está de acuerdo o en desacuerdo con las siguientes afirmaciones?
+
+```{r}
 sd_question(
   type  = 'mc',
   id    = 'esf_1',
@@ -1811,11 +1858,11 @@ sd_question(
   option = escala_acuerdo_nsnr
 )
 
-sd_nav(page_next = "deserve-4",
+sd_nav(page_next = "deserve-7",
   label_next = "Siguiente")
 ```
 
---- deserve-4
+--- deserve-7
 
 Responda las siguientes preguntas a partir de su situación socioeconómica actual.
 

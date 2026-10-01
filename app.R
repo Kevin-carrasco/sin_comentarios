@@ -284,6 +284,10 @@ ui <- tagList(
       .question-container[data-question-id='dec_2'] {
         display: none;
       }
+      /* dec_1_hist only stores dec_1's trajectory (filled from the server) */
+      .question-container[data-question-id='dec_1_hist'] {
+        display: none;
+      }
       /* No sé/Prefiero no responder are always coded as value=98/99
          across the survey's mc questions - set them apart from the
          substantive scale above them with extra spacing. */
@@ -597,10 +601,6 @@ server <- function(input, output, session) {
     sd_store_value(id_user, "id_user")
   })
 
-  # Sample a random respondentID and store it in your data
-  respondentID <- sample(design$respID, 1)
-  sd_store_value(respondentID, "respID")
-
   # Filter for the rows for the chosen respondentID
   df <- design |>
     filter(respID == respondentID)
@@ -828,6 +828,31 @@ server <- function(input, output, session) {
       if (show_dec2) "block" else "none"
     ))
   }, ignoreNULL = TRUE)
+
+  # Keep dec_1's full trajectory, not just the final answer, to see how the
+  # answer changes: every position the slider rested on for >= 0.5 s is
+  # appended as "value@UTC time" (entries joined by "|") to the hidden text
+  # question dec_1_hist, which surveydown then saves as its own column.
+  dec1_hist <- reactiveVal(NULL)
+  dec1_settled <- debounce(reactive(input$dec_1), 500)
+  observeEvent(dec1_settled(), {
+    # Skip the default value and page restorations - only log once touched
+    req(isTRUE(input$dec_1_interacted))
+    hist <- dec1_hist()
+    # First entry this session: continue the history surveydown restored
+    # into dec_1_hist (cookies / going back) instead of overwriting it
+    if (is.null(hist)) {
+      restored <- input$dec_1_hist
+      hist <- if (is.null(restored) || restored == "") character(0) else
+        strsplit(restored, "|", fixed = TRUE)[[1]]
+    }
+    value <- as.character(dec1_settled())
+    last_value <- if (length(hist) > 0) sub("@.*", "", hist[length(hist)]) else NA
+    if (identical(value, last_value)) return()
+    hist <- c(hist, paste0(value, "@", format(Sys.time(), "%Y-%m-%d %H:%M:%OS1", tz = "UTC")))
+    dec1_hist(hist)
+    updateTextInput(session, "dec_1_hist", value = paste(hist, collapse = "|"))
+  })
 
   # Hide the load-time spinner once the first render flush completes, i.e.
   # once the survey page is actually visible/interactive, not just once the
