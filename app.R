@@ -601,6 +601,10 @@ server <- function(input, output, session) {
     sd_store_value(id_user, "id_user")
   })
 
+  # Sample a random respondentID and store it in your data
+  respondentID <- sample(design$respID, 1)
+  sd_store_value(respondentID, "respID")
+
   # Filter for the rows for the chosen respondentID
   df <- design |>
     filter(respID == respondentID)
