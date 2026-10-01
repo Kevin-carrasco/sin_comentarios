@@ -427,13 +427,14 @@ ui <- tagList(
 
 # Helper functions ------------------------------------------------------------
 
-make_cbc_table <- function(df, attr_order = NULL) {
+make_cbc_table <- function(df, attr_order = NULL, fixed_names = NULL) {
   male_names <- c("Mateo", "Lucas", "Benjamin", "Nicolas", "Daniel", "Santiago", "Tomas", "Joaquin")
   female_names <- c("Sofia", "Valentina", "Isidora", "Martina", "Camila", "Florencia", "Catalina", "Antonia")
 
-  # Each profile independently draws a male or female name with p = 0.5.
+  # Each profile independently draws a male or female name with p = 0.5,
+  # unless the caller fixes them (the repeated task reuses task 1's names).
   alt_ids <- sort(unique(df$altID))
-  assigned <- sapply(alt_ids, function(i) {
+  assigned <- if (!is.null(fixed_names)) fixed_names else sapply(alt_ids, function(i) {
     pool <- if (runif(1) < 0.5) male_names else female_names
     sample(pool, 1)
   })
@@ -614,6 +615,19 @@ server <- function(input, output, session) {
     df <- build_default_conjoint_design(respondentID, n_questions = 6)
   }
 
+  # Repeated task for measuring intra-respondent reliability (Clayton,
+  # Horiuchi, Kaufman, King & Komisarchik 2026): task 6 shows task 1's two
+  # profiles again with their sides swapped (altID 1 <-> 2), so a consistent
+  # answer reflects the profiles rather than the side of the screen.
+  df <- df |>
+    filter(qID != 6) |>
+    bind_rows(
+      df |>
+        filter(qID == 1) |>
+        mutate(qID = 6L, obsID = 6L, altID = 3L - altID) |>
+        arrange(altID)
+    )
+
   # Random attribute order fixed for this respondent across all 6 questions
   attr_order <- sample(c("need", "identity", "control", "effort", "reciprocity", "attitude"))
 
@@ -637,8 +651,13 @@ server <- function(input, output, session) {
   assigned_module <- sample(c("A", "B", "C"), 1)
   sd_store_value(assigned_module)
 
-  # Create the options for each choice question (using the helper function above)
-  tables <- lapply(1:6, function(q) make_cbc_table(df |> filter(qID == q), attr_order = attr_order))
+  # Create the options for each choice question (using the helper function above).
+  # Task 6 is task 1 repeated with its sides swapped (see above), so it also
+  # reuses task 1's names, swapped - drawing new ones could change a profile's
+  # name or even its gender, and it would no longer be the same two profiles.
+  tables <- lapply(1:5, function(q) make_cbc_table(df |> filter(qID == q), attr_order = attr_order))
+  tables[[6]] <- make_cbc_table(df |> filter(qID == 6), attr_order = attr_order,
+                                fixed_names = rev(tables[[1]]$names))
   for (q in 1:6) {
     local({
       tbl <- tables[[q]]
